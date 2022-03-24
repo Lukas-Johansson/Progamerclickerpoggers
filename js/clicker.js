@@ -21,8 +21,8 @@ const msgbox = document.querySelector('#msgbox');
  * värden, utan då använder vi let.
  * Läs mer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
  */
-let money = 0;
-let moneyPerClick = 1;
+let money = 10;
+let moneyPerClick = 0;
 let moneyPerSecond = 0;
 let last = 0;
 
@@ -71,9 +71,9 @@ function step(timestamp) {
     // achievements. Titta dock på upgrades arrayen och gör något rimligare om du
     // vill ha achievements.
     // på samma sätt kan du även dölja uppgraderingar som inte kan köpas
-    if (moneyPerClick == 10 && !achievementTest) {
+    if (moneyPerClick == 1 && !achievementTest) {
         achievementTest = true;
-        message('Du har hittat en FOSSIL!', 'achievement');
+        message('Du har påbörjat din episka resa!', 'achievement');
     }
 
     window.requestAnimationFrame(step);
@@ -107,19 +107,24 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
     {
-        name: 'Fin sop',
+        name: 'Liten bok',
         cost: 10,
         amount: 1,
     },
     {
-        name: 'Spade',
+        name: 'Stor bok',
         cost: 100,
         amount: 10,
     },
     {
-        name: 'Hjälpreda',
+        name: 'Giga bok',
         cost: 1000,
         amount: 100,
+    },
+    {
+        name: 'Hela Amongus Lore',
+        cost: 10000,
+        amount: 10000000000000000000000000,
     },
 ];
 
@@ -149,18 +154,18 @@ function createCard(upgrade) {
     const cost = document.createElement('p');
 
     header.textContent = `${upgrade.name}, +${upgrade.amount} per sekund.`;
-    cost.textContent = `Köp för ${upgrade.cost} benbitar.`;
+    cost.textContent = `Köp för ${upgrade.cost} iq.`;
 
     card.addEventListener('click', (e) => {
         if (money >= upgrade.cost) {
             moneyPerClick++;
             money -= upgrade.cost;
             upgrade.cost *= 1.5;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' benbitar';
+            cost.textContent = 'Köp för ' + upgrade.cost + ' iq';
             moneyPerSecond += upgrade.amount;
-            message('Grattis du har lockat till dig fler besökare!', 'success');
+            message('Grattis du har blivit smartare!', 'success');
         } else {
-            message('Du har inte råd.', 'warning');
+            message('Du är inte tillräckligt smart.', 'warning');
         }
     });
 

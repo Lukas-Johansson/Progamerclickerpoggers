@@ -38,6 +38,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-image: ;
 }
 
 /* A elements that don't have a class get default styles */
@@ -90,8 +91,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #f8f8f8;
-    color: #121212;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-family: 'Advent Pro', sans-serif;
 }
 /* För att göra footern sticky så har vi flex på bodyn och då räcker det med 
  * margin-top auto här.
@@ -171,6 +172,10 @@ footer {
     width: 8rem;
     height: 8rem;
     font-size: 2rem;
+    background-image: url(../img/Iblandoss2.png);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
 }
 
 /* #msgbox är elementet som visar sidans toasts, popupmeddelanden
@@ -227,3 +232,25 @@ footer {
 .title {
     font-weight: 600;
 }
+
+.background {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
