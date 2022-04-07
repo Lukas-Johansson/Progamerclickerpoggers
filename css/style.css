@@ -93,6 +93,7 @@ body {
     background-color: #f8f8f8;
     color: #ffffff;
     font-family: 'Amatic SC', cursive;
+    background-image:  url(../img/Amongus.jpg);
 }
 /* För att göra footern sticky så har vi flex på bodyn och då räcker det med 
  * margin-top auto här.
