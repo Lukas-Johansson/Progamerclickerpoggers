@@ -1,7 +1,7 @@
 # I bland oss clicker
-# Träna din IQ för att flex på dina suspekta typerna
-# https://lukas-johansson.github.io/Progamerclickerpoggers/
-# https://github.com/Lukas-Johansson/Progamerclickerpoggers
+Träna din IQ för att flex på dina suspekta typerna
+https://lukas-johansson.github.io/Progamerclickerpoggers/
+https://github.com/Lukas-Johansson/Progamerclickerpoggers
 
 
 # Skriven av/tid
